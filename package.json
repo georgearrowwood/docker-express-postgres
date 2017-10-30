@@ -1,0 +1,43 @@
+{
+  "name": "docker-express-postgres",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server-watch": "nodemon --watch server --exec npm run server-dev",
+    "server-dev": "NODE_ENV=development PORT=7000 node server",
+    "test": "jest",
+    "lint": "eslint server app",
+    "knex": "knex"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.16.2",
+    "body-parser": "1.18.2",
+    "cookie-parser": "1.4.3",
+    "express": "4.16.2",
+    "express-joi-params": "0.1.2",
+    "jsonwebtoken": "8.1.0",
+    "knex": "0.13.0",
+    "pg": "7.3.0",
+    "winston": "2.4.0"
+  },
+  "devDependencies": {
+    "eslint": "4.8.0",
+    "eslint-config-airbnb": "16.0.0",
+    "eslint-config-standard": "10.2.1",
+    "eslint-plugin-import": "2.7.0",
+    "eslint-plugin-jsx-a11y": "6.0.2",
+    "eslint-plugin-node": "5.2.0",
+    "eslint-plugin-promise": "3.5.0",
+    "eslint-plugin-standard": "3.0.1",
+    "jest": "21.2.1"
+  },
+  "jest": {
+    "verbose": true,
+    "collectCoverageFrom": [
+      "**/server/**.{js,jsx}"
+    ]
+  }
+}
